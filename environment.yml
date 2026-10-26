@@ -1,4 +1,4 @@
-name: jrc
+name: smpp-car-following
 channels:
   - defaults
 dependencies:
@@ -63,4 +63,4 @@ dependencies:
     - tzdata==2024.1
     - uncertainties==3.1.7
     - wcwidth==0.2.13
-prefix: C:\Users\leiti\miniconda3\envs\jrc
+prefix: D:\miniconda3\envs\smpp-car-following
