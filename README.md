@@ -1,29 +1,104 @@
-# c2art-car-following-env
- 
-# MFC-based Platoon simulation with V2V communication and distributed model predictive control
+# SMPP Car-Following
 
-## REFERENCES
+**Microscopic Traffic Simulation and Car-Following Models for Connected and Automated Vehicles**
 
-### Platoon with model predictive control
+This repository contains research code developed as part of the **European Commission Joint Research Centre (JRC) Smart Mobility Project Portfolio (SMPP)**, particularly the **Requirements and Implications of a Connected and Automated Mobility (RICAM)** project. The research contributed to understanding the impact of connected and automated vehicles on traffic flow, road capacity, stability, energy consumption, and transport efficiency, through modelling, simulation, and empirical validation.
 
-[1] [Zheng Y, Li SE, Li K, Borrelli F, Hedrick JK. Distributed model predictive control for heterogeneous vehicle platoons under unidirectional topologies. IEEE Transactions on Control Systems Technology. 2016 Aug 17;25(3):899-910.](https://ieeexplore.ieee.org/document/7546918)
+The research focuses on modelling, simulating, and evaluating car-following behaviour, Adaptive Cruise Control (ACC), traffic flow stability, road geometry effects, and vehicle dynamics.
 
-[2] [Li K, Bian Y, Li SE, Xu B, Wang J. Distributed model predictive control of multi-vehicle systems with switching communication topologies. Transportation Research Part C: Emerging Technologies. 2020 Sep 1;118:102717.](https://www.sciencedirect.com/science/article/pii/S0968090X2030632X)
+## Getting Started
 
-[3] [Li SE, Qin X, Zheng Y, Wang J, Li K, Zhang H. Distributed platoon control under topologies with complex eigenvalues: Stability analysis and controller synthesis. IEEE Transactions on Control Systems Technology. 2017 Nov 10;27(1):206-20.](https://ieeexplore.ieee.org/abstract/document/8103336)
+### 1. Clone the Repository
 
-### MFC car-following model
+```bash
+git clone https://github.com/easy-research-lab/smpp-car-following.git
+cd smpp-car-following
+```
 
-[4] [He Y, Makridis M, Mattas K, Fontaras G, Ciuffo B, Xu H. Introducing Electrified Vehicle Dynamics in Traffic Simulation. Transportation Research Record. 2020 Sep;2674(9):776-91.](https://journals.sagepub.com/doi/full/10.1177/0361198120931842)
+### 2. Create the Conda Environment
 
-[5] [Makridis M, Fontaras G, Ciuffo B, Mattas K. MFC free-flow model: Introducing vehicle dynamics in microsimulation. Transportation Research Record. 2019 Apr;2673(4):762-77.](https://journals.sagepub.com/doi/full/10.1177/0361198119838515)
+Create a virtual environment using the provided configuration file [`environment.yml`](https://github.com/easy-research-lab/smpp-car-following/blob/master/environment.yml):
 
-## How to use
+```bash
+conda env create -f environment.yml
+```
 
-1. (Recommended) MATLAB: Run the script of 'MAIN_platoon_mpc.m' in MATLAB
+To identify the environment name, open `environment.yml` and check the `name:` field.
 
-2. (Not recommended) PYTHON: Run the script of 'MAIN_platoon_mpc.py' in PYTHON. (I have not yet finalized this script because the solver (scipy.optimize.minimize) is unstable and not optimal in this case.)
+Activate the environment:
 
-pyenv('Version', "C:\Users\leiti\miniconda3\envs\jrc\python.exe")
+```bash
+conda activate <environment-name>
+```
 
-conda env export > environment.yml
+Replace `<environment-name>` with the name specified in `environment.yml`.
+
+### 3. Usage
+
+After activating the Conda environment, open the relevant Python scripts or Jupyter notebooks in your preferred development environment, such as VS Code or JupyterLab, depending on the files provided in the repository.
+
+For reproducible research:
+
+1. Select the relevant model or simulation workflow.
+2. Configure the required input data, model parameters, and simulation settings.
+3. Run the corresponding implementation.
+4. Analyse the generated trajectories, model predictions, or evaluation results.
+5. Refer to the associated publications for model formulations, calibration procedures, and validation methodology.
+
+**Note:** Entry-point scripts, input-file requirements, and example commands should be documented for each implementation. The specific executable files have not yet been verified.
+
+## Citation
+
+```bibtex
+@article{dona2022multianticipation,
+  title={Multianticipation for string stable Adaptive Cruise Control and increased motorway capacity without vehicle-to-vehicle communication},
+  author={Don{\`a}, Riccardo and Mattas, Konstantinos and He, Yinglong and Albano, Giovanni and Ciuffo, Biagio},
+  journal={Transportation Research Part C: Emerging Technologies},
+  volume={140},
+  pages={103687},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{he2022physics,
+  title={Physics-augmented models to simulate commercial adaptive cruise control (ACC) systems},
+  author={He, Yinglong and Montanino, Marcello and Mattas, Konstantinos and Punzo, Vincenzo and Ciuffo, Biagio},
+  journal={Transportation Research Part C: Emerging Technologies},
+  volume={139},
+  pages={103692},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{he2021introducing,
+  title={Introducing the effects of road geometry into microscopic traffic models for automated vehicles},
+  author={He, Yinglong and Mattas, Konstantinos and Dona, Riccardo and Albano, Giovanni and Ciuffo, Biagio},
+  journal={IEEE transactions on intelligent transportation systems},
+  volume={23},
+  number={8},
+  pages={13604--13613},
+  year={2021},
+  publisher={IEEE}
+}
+
+@article{he2024introducing,
+  title={Introducing hybrid vehicle dynamics in microscopic traffic simulation},
+  author={He, Yinglong and Mattas, Konstantinos and Makridis, Michail A and Komnos, Dimitrios and Marin, Andres L and Fontaras, Georgios and Ciuffo, Biagio},
+  journal={IEEE transactions on intelligent transportation systems},
+  volume={25},
+  number={7},
+  pages={7977--7986},
+  year={2024},
+  publisher={IEEE}
+}
+
+```
+
+## Acknowledgements
+
+This work was conducted within the European Commission Joint Research Centre (JRC) Smart Mobility Project Portfolio, particularly the RICAM project, with contributions from collaborating researchers and institutions.
+
+
+## License
+
+See the LICENSE file for details.
