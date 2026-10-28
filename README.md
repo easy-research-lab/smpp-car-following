@@ -2,11 +2,7 @@
 
 **Microscopic Traffic Simulation and Car-Following Models for Connected and Automated Vehicles**
 
-This repository contains research code developed as part of the **European Commission Joint Research Centre (JRC) Smart Mobility Project Portfolio (SMPP)**, particularly the **Requirements and Implications of a Connected and Automated Mobility (RICAM)** project. The research contributed to understanding the impact of connected and automated vehicles on traffic flow, road capacity, stability, energy consumption, and transport efficiency, through modelling, simulation, and empirical validation.
-
-<img src="assets/img/smpp2020vision.jpg" alt="LST estimation" width="600">
-
-*Fig. 1. SMPP research vision.*
+This repository contains research code developed to understand the impact of connected and automated vehicles on traffic flow, road capacity, stability, energy consumption, and transport efficiency, through modelling, simulation, and empirical validation.
 
 The research focuses on modelling, simulating, and evaluating car-following behaviour, Adaptive Cruise Control (ACC), traffic flow stability, road geometry effects, and vehicle dynamics.
 
@@ -101,6 +97,10 @@ For reproducible research:
 ## Acknowledgements
 
 This work was conducted within the European Commission Joint Research Centre (JRC) Smart Mobility Project Portfolio, particularly the RICAM project, with contributions from collaborating researchers and institutions.
+
+<img src="assets/img/smpp2020vision.jpg" alt="LST estimation" width="600">
+
+*Fig. 1. SMPP research vision.*
 
 
 ## License
